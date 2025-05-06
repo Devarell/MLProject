@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Nilai - GradePredictor</title>
+    <!-- Pastikan Path CSS ini benar sesuai struktur folder Anda -->
+    <link rel="stylesheet" href="../CSS/Halaman 1.css">
+    <!-- CSS Khusus Halaman Prediksi -->
+    <link rel="stylesheet" href="../CSS/Halaman 2.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Struktur Header Sama Persis dengan Homepage -->
+        <div class="container">
+            <div class="logo">
+                <h1>GradePredictor</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <!-- Beri class 'active' pada link Prediksi -->
+                    <li class="active"><a href="PredictionPage.html">Prediksi</a></li>
+                    <li><a href="AboutUs.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Judul Halaman (Mirip Hero tapi lebih simpel) -->
+    <section class="page-title-header">
+        <div class="container">
+            <h1>Formulir Prediksi Nilai</h1>
+            <p>Masukkan data Anda untuk mendapatkan prediksi nilai yang akurat.</p>
+        </div>
+    </section>
+
+    <!-- Konten Utama (Sidebar + Form) -->
+    <main class="main-content-prediksi container">
+        <aside class="sidebar-prediksi">
+            <div class="sidebar-header">
+                <h3>Panduan Prediksi</h3>
+            </div>
+            <div class="guide-section">
+                <i class="fas fa-info-circle guide-icon"></i>
+                <div>
+                    <h4>Cara Kerja</h4>
+                    <p>Sistem kami menggunakan algoritma machine learning untuk memprediksi nilai berdasarkan data yang Anda masukkan.</p>
+                </div>
+            </div>
+            <div class="guide-section">
+                <i class="fas fa-tasks guide-icon"></i>
+                <div>
+                    <h4>Informasi yang Dibutuhkan</h4>
+                    <p>Isi semua kolom dengan data yang akurat untuk hasil prediksi terbaik.</p>
+                </div>
+            </div>
+            <div class="guide-section">
+                <i class="fas fa-lock guide-icon"></i>
+                <div>
+                    <h4>Privasi Data</h4>
+                    <p>Data Anda aman dan hanya digunakan untuk keperluan prediksi.</p>
+                </div>
+            </div>
+            <div class="guide-section">
+                <i class="fas fa-chart-pie guide-icon"></i>
+                <div>
+                    <h4>Akurasi Prediksi</h4>
+                    <p>Hasil prediksi memiliki tingkat akurasi hingga X% berdasarkan data historis.</p> <!-- Ganti X% -->
+                </div>
+            </div>
+        </aside>
+
+        <section class="form-container-prediksi">
+            <form id="predictionForm" action="hasil_prediksi.html" method="GET">
+
+                <!-- Bagian Informasi Dasar DIHAPUS -->
+
+                <!-- Bagian Faktor Prediksi (Telah Dimodifikasi Sesuai Permintaan Terakhir) -->
+                <fieldset class="form-section">
+                    <legend class="form-section-title">Faktor Prediksi</legend>
+
+                    <!-- Baris Baru: Mata Pelajaran (Full Width) -->
+                    <div class="form-group">
+                         <label for="mataPelajaran">Mata Pelajaran:</label>
+                         <input type="text" id="mataPelajaran" name="mataPelajaran" class="form-control" placeholder="Contoh: Matematika" required>
+                    </div>
+
+                    <!-- Baris Berikutnya: Internet Access & Extracurricular Activity -->
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label>Internet Access:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="internetAccess" value="yes" required> Yes</label>
+                                <label><input type="radio" name="internetAccess" value="no"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group half-width">
+                             <label>Extracurricular Activity:</label>
+                             <div class="radio-group">
+                                <label><input type="radio" name="extracurricular" value="yes" required> Yes</label>
+                                <label><input type="radio" name="extracurricular" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baris Berikutnya: Peer Influence & Access to Resource -->
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                             <label for="peerInfluence">Peer Influence:</label>
+                            <select id="peerInfluence" name="peerInfluence" class="form-control" required>
+                                <option value="" disabled selected>Pilih Tingkat Pengaruh</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                         <div class="form-group half-width">
+                             <label for="resourceAccess">Access to Resource:</label>
+                             <select id="resourceAccess" name="resourceAccess" class="form-control" required>
+                                 <option value="" disabled selected>Pilih Tingkat Akses</option>
+                                 <option value="low">Low</option>
+                                 <option value="medium">Medium</option>
+                                 <option value="high">High</option>
+                             </select>
+                        </div>
+                    </div>
+
+                     <!-- Baris Berikutnya: Teacher Quality & Distance From Home -->
+                     <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="teacherQuality">Teacher Quality:</label>
+                            <select id="teacherQuality" name="teacherQuality" class="form-control" required>
+                                <option value="" disabled selected>Pilih Kualitas Guru</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group half-width">
+                             <label for="distanceHome">Distance From Home:</label>
+                            <select id="distanceHome" name="distanceHome" class="form-control" required>
+                                <option value="" disabled selected>Pilih Jarak</option>
+                                <option value="near">Near (<10km)</option>
+                                <option value="moderate">Moderate (10-20km)</option>
+                                <option value="far">Far (>20km)</option>
+                            </select>
+                            <p class="help-text">Ket: <10km = Near, 10-20km = Moderate, >20km = Far</p>
+                        </div>
+                    </div>
+
+                    <!-- Baris Berikutnya: Hours Studied & Previous Exam Score -->
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="hoursStudied">Hours Studied (per week):</label>
+                            <input type="number" id="hoursStudied" name="hoursStudied" min="0" class="form-control" placeholder="Contoh: 15" required>
+                        </div>
+                        <div class="form-group half-width">
+                             <label for="previousScore">Previous Exam Score:</label>
+                            <input type="number" id="previousScore" name="previousScore" min="0" max="100" class="form-control" placeholder="Contoh: 75" required>
+                        </div>
+                    </div>
+
+                     <!-- Baris Berikutnya: Attendance & Total Sessions -->
+                     <div class="form-row">
+                        <div class="form-group half-width">
+                             <label for="attendance">Attendance (Jumlah Kehadiran):</label>
+                            <input type="number" id="attendance" name="attendance" min="0" class="form-control" placeholder="Contoh: 12" required>
+                        </div>
+                        <div class="form-group half-width">
+                             <label for="totalSessions">Total Sessions (Total Sesi Kelas):</label>
+                             <input type="number" id="totalSessions" name="totalSessions" min="1" class="form-control" placeholder="Contoh: 14" required>
+                        </div>
+                    </div>
+
+                    <!-- Baris Berikutnya: Tutoring Sessions (Full Width) -->
+                    <div class="form-group">
+                        <label for="tutoringSessions">Number of Tutoring Sessions:</label>
+                        <input type="number" id="tutoringSessions" name="tutoringSessions" min="0" class="form-control" placeholder="Contoh: 5" required>
+                    </div>
+                </fieldset>
+
+                <!-- Tombol Aksi -->
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-form-secondary">Reset</button>
+                    <button type="submit" class="btn btn-form-primary">Prediksi Sekarang</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Struktur Footer Sama Persis dengan Homepage -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>GradePredictor</h2>
+                    <p>Masa depan pendidikan dengan prediksi nilai</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="prediction.html">Prediksi</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Hubungi Kami</h3>
+                    <p><i class="fas fa-envelope"></i> info@gradepredictor.com</p>
+                    <p><i class="fas fa-phone"></i> +62 123 4567 890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 GradePredictor. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pastikan Path JS ini benar -->
+    <script src="../JS/Halaman 1.js"></script>
+</body>
+</html>
