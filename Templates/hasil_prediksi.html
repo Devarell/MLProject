@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi Nilai - GradePredictor</title>
+    <!-- Path relatif dari folder static -->
+    <link rel="stylesheet" href="../Static/Halaman 1.css">
+    <link rel="stylesheet" href="../Static/prediction_styles.css"> <!-- Gaya utama -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Struktur Header Sama -->
+        <div class="container">
+             <div class="logo"><h1>GradePredictor</h1></div>
+             <nav>
+                 <ul>
+                     <li><a href="{{ url_for('read_root') }}">Home</a></li>
+                     <li><a href="{{ url_for('show_prediction_form') }}">Prediksi</a></li>
+                     <li><a href="{{ url_for('show_about_page') }}">Tentang</a></li>
+                     <li><a href="#">Kontak</a></li>
+                 </ul>
+             </nav>
+             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+         </div>
+    </header>
+
+     <section class="page-title-header">
+        <div class="container">
+            <!-- Judul ini mungkin tetap ada atau bisa disembunyikan jika error -->
+            <h1>Hasil Prediksi Nilai Kamu</h1>
+        </div>
+    </section>
+
+    <main class="container result-page-content">
+         <div class="result-container">
+
+            <!-- Bagian ini HANYA muncul jika ada error dari backend -->
+            {% if error %}
+                <div class="error-message">
+                    <strong>Error:</strong> {{ error }}
+                </div>
+            {% endif %}
+
+            <!-- Bagian ini HANYA muncul jika TIDAK ada error -->
+            {% if not error and prediksi_skor is defined %}
+                <div class="score-display simplified">
+                    <span class="score-label">Prediksi Nilai:</span>
+                    <span id="predicted-score">{{ prediksi_skor }}</span>
+                </div>
+                <div class="result-box suggestion-box">
+                    <h3>Saran Belajar:</h3>
+                    <p id="suggestion-text">{{ saran }}</p>
+                </div>
+             {% endif %}
+
+            <!-- Disclaimer SELALU ditampilkan -->
+            <div class="result-box disclaimer-box">
+                <h3>Disclaimer:</h3>
+                <p>Hasil prediksi ini adalah estimasi berdasarkan data yang dimasukkan dan model AI kami (Random Forest). Hasil sebenarnya dapat bervariasi.</p>
+            </div>
+
+            <!-- Tombol SELALU ditampilkan -->
+            <div class="result-actions">
+                 <!-- Gunakan class btn dan spesifik untuk styling -->
+                <a href="{{ url_for('show_prediction_form') }}" class="btn btn-result-secondary">Coba Lagi</a>
+                <a href="#" class="btn btn-result-primary">Tips Belajar</a>
+            </div>
+        </div>
+    </main>
+
+     <footer>
+        <!-- Struktur Footer Sama -->
+         <div class="container">
+            <div class="footer-content">...</div>
+            <div class="footer-bottom">...</div>
+         </div>
+     </footer>
+
+     <!-- JS Menu mobile jika perlu -->
+     <script src="{{ url_for('static', filename='static/Halaman 1.js') }}"></script>
+</body>
+</html>

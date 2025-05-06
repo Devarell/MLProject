@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - GradePredictor</title>
+    <!-- Link ke CSS bersama dan CSS khusus halaman ini -->
+    <link rel="stylesheet" href="../Static/Halaman 1.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='/static/prediction_styles.css') }}"> <!-- Gaya umum -->
+    <link rel="stylesheet" href="../Static/AboutUs.css"> <!-- Gaya khusus About -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Struktur Header Sama Persis - Tandai 'Tentang' sebagai aktif -->
+        <div class="container">
+            <div class="logo">
+                <h1>GradePredictor</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="PredictionPage.html">Prediksi</a></li>
+                    <!-- Tandai halaman ini sebagai aktif -->
+                    <li class="active"><a href="AboutUs.html">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li> <!-- Ganti dengan url_for jika ada -->
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Judul Halaman (Opsional, bisa disatukan dengan section pertama) -->
+    <section class="page-title-header about-title-header">
+        <div class="container">
+            <h1>Cerita Kami</h1>
+            <p>Mengenal lebih dekat GradePredictor dan tim di baliknya.</p>
+        </div>
+    </section>
+
+    <main class="container about-page-content">
+
+        <!-- Section: Why -->
+        <section class="about-section why-section">
+            <div class="section-header">
+                 <!-- Judul besar WHY sesuai sketsa -->
+                <h2><span class="why-highlight">Why?</span> (Kenapa Kami Membuat Web Ini?)</h2>
+                 <!-- Tidak perlu underline di sini jika desainnya beda -->
+            </div>
+            <div class="section-content">
+                <p>Pendidikan adalah kunci masa depan, namun seringkali siswa dan pendidik merasa kesulitan memprediksi hasil akademik secara akurat. Kami melihat adanya kebutuhan akan alat bantu yang dapat memberikan gambaran potensi nilai berdasarkan data historis dan faktor-faktor relevan lainnya.</p>
+                <p>GradePredictor lahir dari keinginan kami untuk:</p>
+                <ul>
+                    <li>Membantu siswa memahami faktor apa saja yang memengaruhi nilai mereka.</li>
+                    <li>Memberikan insight kepada siswa dan pendidik untuk perencanaan studi yang lebih baik.</li>
+                    <li>Memanfaatkan kekuatan machine learning untuk memberikan prediksi yang objektif dan informatif.</li>
+                    <li>Menciptakan platform yang mudah digunakan dan bermanfaat bagi komunitas akademik.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section: What -->
+        <section class="about-section what-section">
+             <div class="section-header">
+                <h2>What (Tentang Proyek GradePredictor)</h2>
+                <div class="underline"></div> <!-- Underline standar -->
+            </div>
+            <div class="section-content">
+                <p>GradePredictor adalah sebuah platform berbasis web yang dirancang untuk memprediksi nilai akademik siswa. Kami menggunakan algoritma machine learning, khususnya model Random Forest, yang dilatih menggunakan berbagai data relevan seperti nilai ujian sebelumnya, jam belajar, tingkat kehadiran, dan faktor-faktor eksternal lainnya.</p>
+                <p>Fitur utama kami adalah formulir prediksi di mana pengguna dapat memasukkan data mereka untuk mendapatkan estimasi nilai. Selain itu, kami berusaha memberikan saran yang dipersonalisasi berdasarkan hasil prediksi untuk membantu pengguna meningkatkan performa akademik mereka.</p>
+                <p>Proyek ini dikembangkan sebagai bagian dari [Sebutkan Mata Kuliah/Tujuan Proyek Anda, misal: Tugas Akhir Mata Kuliah Pembelajaran Mesin] dengan fokus pada penerapan teknik data science untuk solusi praktis di bidang pendidikan.</p>
+            </div>
+        </section>
+
+        <!-- Section: Team -->
+        <section class="about-section team-section">
+             <div class="section-header">
+                <h2>Tim Kami</h2>
+                <div class="underline"></div> <!-- Underline standar -->
+            </div>
+            <div class="section-content team-content">
+                <h3>Kelompok 3</h3>
+                <ul class="team-list">
+                    <li>
+                        <span class="team-member-name">Nama Anggota 1</span> -
+                        <span class="team-member-nim">NIM Anggota 1</span>
+                    </li>
+                    <li>
+                        <span class="team-member-name">Nama Anggota 2</span> -
+                        <span class="team-member-nim">NIM Anggota 2</span>
+                    </li>
+                    <li>
+                        <span class="team-member-name">Nama Anggota 3</span> -
+                        <span class="team-member-nim">NIM Anggota 3</span>
+                    </li>
+                    <!-- Tambahkan anggota lain jika ada -->
+                </ul>
+                 <p>Kami adalah mahasiswa [Jurusan Anda] di [Nama Universitas Anda] yang berkolaborasi dalam mengembangkan proyek GradePredictor ini.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Struktur Footer Sama -->
+        <div class="container">...</div>
+    </footer>
+
+    <!-- JS untuk menu mobile jika perlu -->
+    <script src="../Static/Halaman 1.js"></script>
+</body>
+</html>

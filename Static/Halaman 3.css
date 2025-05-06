@@ -1,0 +1,108 @@
+/* prediction_styles.css */
+
+/* ... (Gaya sebelumnya untuk header, page-title, input section, dll.) ... */
+
+/* === Gaya untuk Bagian Hasil Prediksi === */
+#prediction-result-section {
+    padding-top: 40px;    /* Jarak dari header/judul */
+    padding-bottom: 60px; /* Jarak ke footer */
+    background-color: #f8f9fa; /* Background agak berbeda dari form */
+    border-radius: 8px;
+    margin-top: 30px; /* Beri jarak jika input section hilang */
+    margin-bottom: 30px;
+}
+
+.result-container {
+    max-width: 700px; /* Batasi lebar konten hasil */
+    margin: 0 auto;   /* Tengahkan */
+    background-color: #ffffff; /* Background putih untuk box hasil */
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.result-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.score-display {
+    background-color: #f0f2f5; /* Background box skor */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+#predicted-score {
+    font-size: 4.5rem; /* Ukuran skor besar */
+    font-weight: 700;
+    color: #4e73df; /* Warna biru primer */
+    line-height: 1;
+    display: block;
+}
+
+.score-assessment {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.result-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e7e7e7;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left; /* Saran dan disclaimer rata kiri */
+}
+
+.result-box h3 {
+    font-size: 1.1rem;
+    color: #4e73df;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-box p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.result-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Tengahkan tombol */
+    gap: 20px; /* Jarak antar tombol */
+    flex-wrap: wrap; /* Agar tombol bisa wrap di mobile */
+}
+
+/* Pastikan tombol di hasil memiliki style yg konsisten */
+/* Menggunakan class yang sama dari form */
+.result-actions .btn-form-secondary,
+.result-actions .btn-form-primary {
+    min-width: 120px; /* Lebar minimum tombol */
+}
+
+
+/* Penyesuaian Responsif untuk Hasil */
+@media (max-width: 768px) {
+    .result-container {
+        padding: 30px 20px;
+    }
+    #predicted-score {
+        font-size: 3.5rem;
+    }
+    .score-assessment {
+        font-size: 1.1rem;
+    }
+    .result-actions {
+        gap: 15px;
+    }
+}
