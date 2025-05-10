@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Prediksi Nilai - GradePredictor</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Halaman 1.css') }}"
+    />
+    {# Menggunakan url_for untuk file statis #}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/prediction_styles.css') }}"
+    />
+    {# Menggunakan url_for untuk file statis #}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo"><h1>GradePredictor</h1></div>
+        <nav>
+          <ul>
+            {# PERBAIKAN: Ganti '../templates/HomePage.html' menjadi
+            url_for('halaman_utama') #}
+            <li><a href="{{ url_for('halaman_utama') }}">Home</a></li>
+            {# PERBAIKAN: Ganti '../templates/PredictionPage.html' menjadi
+            url_for('halaman_prediksi') #}
+            <li><a href="{{ url_for('halaman_prediksi') }}">Prediksi</a></li>
+            {# PERBAIKAN: Ganti '../templates/AboutUs.html' menjadi
+            url_for('halaman_tentang') #}
+            <li><a href="{{ url_for('halaman_tentang') }}">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      </div>
+    </header>
+
+    <section class="page-title-header">
+      <div class="container">
+        <h1>Hasil Prediksi Nilai Kamu</h1>
+      </div>
+    </section>
+
+    <main class="container result-page-content">
+      <div class="result-container">
+        {% if error %}
+        <div class="error-message"><strong>Error:</strong> {{ error }}</div>
+        {% endif %} {% if not error and prediksi_skor is defined %}
+        <div class="score-display simplified">
+          <span class="score-label">Prediksi Nilai:</span>
+          <span id="predicted-score">{{ prediksi_skor }}</span>
+        </div>
+        <div class="result-box suggestion-box">
+          <h3>Saran Belajar:</h3>
+          <p id="suggestion-text">{{ saran }}</p>
+        </div>
+        {% endif %}
+
+        <div class="result-box disclaimer-box">
+          <h3>Disclaimer:</h3>
+          <p>
+            Hasil prediksi ini adalah estimasi berdasarkan data yang dimasukkan
+            dan model AI kami (Random Forest). Hasil sebenarnya dapat
+            bervariasi.
+          </p>
+        </div>
+
+        <div class="result-actions">
+          <a
+            href="{{ url_for('halaman_prediksi') }}"
+            {#
+            Ini
+            sudah
+            benar,
+            kembali
+            ke
+            halaman
+            form
+            prediksi
+            #}
+            class="btn btn-result-secondary"
+            >Coba Lagi</a
+          >
+          <a href="#" class="btn btn-result-primary">Tips Belajar</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">...</div>
+        <div class="footer-bottom">...</div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/Halaman 1.js') }}"></script>
+    {# Menggunakan url_for untuk file statis #}
+  </body>
+</html>

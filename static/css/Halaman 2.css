@@ -1,0 +1,244 @@
+/* prediction_styles.css */
+
+/* Override Header agar tidak fixed */
+header {
+    position: static; /* Ubah dari fixed ke static */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Mungkin shadow sedikit berbeda */
+}
+
+/* Style untuk Judul Halaman (Pengganti Hero) */
+.page-title-header {
+    background-color: #f8f9fa; /* Warna background light seperti section lain */
+    padding: 60px 0; /* Padding atas bawah */
+    text-align: center;
+    margin-top: 70px; /* Beri jarak dari header jika header sebelumnya fixed */
+    /* Jika header static, margin-top ini bisa dikurangi atau dihapus */
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.page-title-header h1 {
+    font-size: 2.2rem;
+    color: #333; /* Teks gelap */
+    margin-bottom: 15px;
+}
+
+.page-title-header p {
+    font-size: 1.1rem;
+    color: #666; /* Teks abu-abu */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Layout Utama Halaman Prediksi (Sidebar + Form) */
+.main-content-prediksi {
+    display: flex;
+    gap: 30px; /* Jarak antara sidebar dan form */
+    padding-top: 40px; /* Jarak dari judul halaman */
+    padding-bottom: 60px; /* Jarak ke footer */
+    align-items: flex-start; /* Konten mulai dari atas */
+}
+
+/* Sidebar Prediksi */
+.sidebar-prediksi {
+    flex-basis: 30%; /* Lebar sidebar */
+    background-color: #ffffff; /* Background putih */
+    border: 1px solid #e7e7e7; /* Border tipis */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar-header h3 {
+    font-size: 1.3rem;
+    color: #4e73df; /* Warna biru primer */
+}
+
+.guide-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.guide-section:last-child {
+    margin-bottom: 0;
+}
+
+.guide-icon {
+    font-size: 1.5rem; /* Ukuran ikon */
+    color: #4e73df; /* Warna ikon biru */
+    margin-right: 15px;
+    margin-top: 2px; /* Penyesuaian vertikal */
+    width: 25px; /* Lebar tetap agar teks rata */
+    text-align: center;
+}
+
+.guide-section h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.guide-section p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Form Container Prediksi */
+.form-container-prediksi {
+    flex-basis: 70%; /* Lebar area form */
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling Form Elements */
+.form-section {
+    margin-bottom: 30px;
+    border: none; /* Hapus border default fieldset */
+    padding: 0;
+}
+
+.form-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4e73df; /* Warna biru */
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e7e7e7; /* Garis bawah abu */
+    display: block; /* Agar full width */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+.form-group.half-width {
+    flex-basis: calc(50% - 10px);
+    flex-grow: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-control { /* Class untuk input, select, textarea */
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4e73df; /* Border biru saat focus */
+    box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.2);
+}
+
+/* Placeholder styling (jika perlu) */
+.form-control::placeholder { color: #aaa; }
+select.form-control:invalid { color: #aaa; } /* Placeholder untuk select */
+option[value=""][disabled] { display: none; }
+option { color: #333; }
+
+/* Radio button styling */
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: normal;
+    color: #555;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #4e73df; /* Warna centang biru */
+}
+
+.help-text {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Tombol Aksi di Form */
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* Tombol Submit Utama (Biru dg Teks Putih) */
+.btn-form-primary {
+    background-color: #4e73df; /* Warna biru primer */
+    color: #fff;
+    border: 1px solid #4e73df;
+}
+.btn-form-primary:hover {
+    background-color: #2e59d9; /* Biru sedikit lebih gelap */
+    border-color: #2e59d9;
+}
+
+/* Tombol Reset (Abu-abu dg Teks Gelap) */
+.btn-form-secondary {
+    background-color: #e2e3e5; /* Warna abu-abu */
+    color: #5a5c69;
+    border: 1px solid #d1d3e2;
+}
+.btn-form-secondary:hover {
+    background-color: #d1d3e2;
+    border-color: #b7b9cc;
+}
+
+/* Penyesuaian Responsif untuk Halaman Prediksi */
+@media (max-width: 992px) {
+    .main-content-prediksi {
+        flex-direction: column;
+    }
+    .sidebar-prediksi,
+    .form-container-prediksi {
+        flex-basis: 100%; /* Lebar penuh */
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack input dalam baris */
+        gap: 15px;
+    }
+    .form-group.half-width {
+        flex-basis: auto; /* Reset lebar setengah */
+    }
+    .page-title-header {
+        padding: 40px 0;
+        margin-top: 60px; /* Sesuaikan jika header jadi static */
+    }
+    .page-title-header h1 {
+        font-size: 1.8rem;
+    }
+}

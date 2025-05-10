@@ -1,0 +1,232 @@
+/* static/css/about_styles.css */
+
+/* ====================================================== */
+/* Gaya Khusus untuk Halaman Tentang Kami (About Us)     */
+/* ====================================================== */
+
+/* --- Penyesuaian Judul Halaman (Opsional) --- */
+/* Beri sedikit perbedaan background jika diinginkan */
+.about-title-header {
+    background-color: #f0f4f8; /* atau warna background Anda */
+
+    /* --- UBAH BAGIAN INI --- */
+    /* Naikkan nilai padding-top (misal dari 50px/60px menjadi 80px atau sesuai kebutuhan) */
+    padding: 80px 20px 50px 20px; /* Format: Atas Kanan Bawah Kiri */
+    /* --- AKHIR PERUBAHAN --- */
+
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 30px;
+    /* Pastikan tidak ada margin negatif atau posisi aneh */
+    margin-top: 0;
+    position: relative;
+}
+
+/* --- Kontainer Utama Konten --- */
+.about-page-content {
+    /* Menggunakan .container dari CSS dasar untuk lebar & centering */
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* --- Gaya Umum per Bagian Konten --- */
+.about-section {
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 35px 40px; /* Padding internal */
+    margin-bottom: 40px; /* Jarak antar section */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+.about-section:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Gaya Konten di Dalam Section --- */
+.section-content {
+    color: #555; /* Warna teks standar */
+    line-height: 1.7; /* Jarak antar baris */
+    font-size: 1.05rem; /* Ukuran font konten sedikit lebih besar */
+}
+
+.section-content p {
+    margin-bottom: 1.2em; /* Jarak antar paragraf */
+}
+.section-content p:last-of-type {
+     margin-bottom: 0; /* Hapus margin bawah paragraf terakhir */
+}
+
+
+.section-content ul {
+    list-style: disc; /* Bullet point standar */
+    margin-left: 25px; /* Indentasi */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 0; /* Reset padding default browser */
+}
+
+.section-content ul li {
+    margin-bottom: 10px; /* Jarak antar item list */
+    padding-left: 5px;
+}
+
+/* --- Gaya Spesifik Section Header (jika berbeda dari standar) --- */
+/* Mengasumsikan .section-header dan .underline sudah ada di CSS lain */
+.about-section .section-header {
+    margin-bottom: 35px; /* Jarak header ke konten */
+    text-align: center; /* Default tengahkan */
+}
+.about-section .section-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333; /* Warna judul section */
+}
+/* Pastikan .underline ada di HTML jika ingin menggunakannya */
+.about-section .section-header .underline {
+     margin-top: 10px;
+     margin-bottom: 0;
+     background-color: #4e73df; /* Warna primary */
+}
+
+/* --- Gaya Spesifik untuk Section 'Why' --- */
+.why-section .section-header {
+    text-align: left; /* Ratakan kiri */
+    margin-bottom: 20px; /* Kurangi jarak bawah */
+}
+.why-section .section-header h2 {
+    font-size: 3rem; /* Ukuran font besar */
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 0; /* Hapus margin bawah default h2 */
+    border-bottom: none; /* Pastikan tidak ada garis bawah default */
+}
+.why-section .section-header .why-highlight {
+    color: #4e73df; /* Warna primer untuk "Why?" */
+    display: block; /* Buat "Why?" di baris sendiri */
+    margin-bottom: 5px;
+}
+/* Sembunyikan .underline jika ada di HTML Why section */
+.why-section .section-header .underline {
+    display: none;
+}
+
+
+/* --- Gaya Spesifik untuk Section 'Team' --- */
+.team-section .section-header {
+     text-align: center; /* Judul tim tetap di tengah */
+}
+
+.team-content {
+    text-align: center; /* Konten tim di tengah */
+}
+
+.team-content h3 { /* Styling "Kelompok 3" */
+    font-size: 1.5rem;
+    color: #5a6a7a; /* Warna sedikit lebih lembut */
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.team-list {
+    list-style: none; /* Hapus bullet points */
+    padding: 0;
+    margin: 0 auto 30px; /* Tengahkan list */
+    max-width: 450px; /* Batasi lebar list */
+    text-align: left; /* Teks di dalam list rata kiri */
+}
+
+.team-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding: 8px 0 8px 15px; /* Padding untuk ruang garis kiri */
+    border-left: 4px solid #4e73df; /* Garis penanda biru */
+    background-color: #f8f9fa; /* Background berbeda untuk item list */
+    border-radius: 0 4px 4px 0; /* Sudut kanan melengkung */
+    transition: background-color 0.2s ease;
+}
+.team-list li:hover {
+    background-color: #e9ecef; /* Warna hover */
+}
+
+.team-member-name {
+    font-weight: 600;
+    color: #2c3e50; /* Warna nama lebih gelap */
+}
+
+.team-member-nim {
+    color: #555;
+    font-family: Consolas, 'Courier New', monospace; /* Font monospace untuk NIM */
+    margin-left: 8px;
+    font-size: 1rem; /* Ukuran NIM sedikit lebih kecil */
+}
+
+.team-content > p { /* Paragraf deskripsi tim di bawah list */
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* === Responsiveness untuk Halaman Tentang === */
+@media (max-width: 992px) {
+    /* Tidak banyak perubahan layout dasar, mungkin hanya padding */
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 25px 20px; /* Kurangi padding section */
+        margin-bottom: 30px;
+    }
+    .why-section .section-header h2 {
+        font-size: 2.2rem; /* Kecilkan judul 'Why' */
+    }
+    .about-section .section-header h2 {
+        font-size: 1.8rem; /* Kecilkan judul section lain */
+    }
+    .section-content {
+        font-size: 1rem; /* Kecilkan sedikit font konten */
+    }
+     .team-list {
+         max-width: 90%; /* List tim lebih fleksibel */
+    }
+    .team-list li {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+     .team-member-nim {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title-header { padding: 40px 15px; }
+    .page-title-header h1 { font-size: 1.6rem; }
+    .page-title-header p { font-size: 0.95rem; }
+
+     .about-section {
+        padding: 20px 15px;
+     }
+     .why-section .section-header h2 {
+        font-size: 1.8rem;
+    }
+     .about-section .section-header h2 {
+        font-size: 1.5rem;
+    }
+     .team-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .team-list li {
+        padding: 6px 0 6px 10px;
+        margin-bottom: 12px;
+    }
+    .team-member-name, .team-member-nim {
+        display: block; /* Buat nama dan NIM jadi baris terpisah */
+        margin-left: 0;
+    }
+     .team-member-nim {
+        margin-top: 3px;
+    }
+
+}
